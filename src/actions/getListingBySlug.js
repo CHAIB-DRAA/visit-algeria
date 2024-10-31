@@ -6,7 +6,7 @@ export default async function getListingBySlug(params) {
 
 		const listing = await prisma.listing.findUnique({
 			where: {
-				id: parseInt(listingId),
+				id: listingId.toString(), // Convertir en chaîne
 			},
 			include: {
 				user: {
@@ -14,7 +14,6 @@ export default async function getListingBySlug(params) {
 						profile: true,
 					},
 				},
-
 				reviews: {
 					select: {
 						rating: true,
