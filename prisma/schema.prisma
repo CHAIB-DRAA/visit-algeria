@@ -1,0 +1,152 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id             String      @id @default(auto()) @map("_id") @db.ObjectId
+  name           String?
+  email          String?     @unique
+  emailVerified  DateTime?
+  image          String?
+  hashedPassword String?
+  role           Role        @default(USER)
+  createdAt      DateTime    @default(now()) @map("created_at")
+  updatedAt      DateTime    @updatedAt @map("updated_at")
+  accounts       Account[]
+  profile        Profile?
+  listings       Listing[]
+  favourites     Favourite[]
+  reviews        Review[]
+  blogPosts      BlogPost[]
+}
+
+model Profile {
+  id       String  @id @default(auto()) @map("_id") @db.ObjectId
+  userId   String  @unique @map("user_id") @db.ObjectId
+  bio      String?
+  gender   String?
+  address  String?
+  phone    String?
+  website  String?
+  twitter  String?
+  facebook String?
+  linkedin String?
+  youtube  String?
+  user     User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Account {
+  id                String  @id @default(auto()) @map("_id") @db.ObjectId
+  userId            String  @map("user_id") @db.ObjectId
+  type              String
+  provider          String
+  providerAccountId String
+  refreshToken      String? @map("refresh_token")
+  accessToken       String? @map("access_token")
+  expiresAt         Int?    @map("expires_at")
+  tokenType         String? @map("token_type")
+  scope             String?
+  idToken           String? @map("id_token")
+  sessionState      String? @map("session_state")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@index([userId])
+}
+
+model Listing {
+  id             String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId         String   @map("user_id") @db.ObjectId
+  title          String
+  slug           String
+  description    String
+  imageSrc       String
+  imageBg        String? // Ajoutez ce champ s'il est nécessaire
+  address        String
+  features       String
+  createdAt      DateTime @default(now()) @map("created_at")
+  location_value String   @map("location_value") // Ajout de location_value
+  region         String // Ajout de region si nécessaire
+  price          Int
+  latitude       Float
+  longitude      Float
+  category       String
+  status         Status   @default(Pending)
+
+  user       User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  reviews    Review[]
+  favourites Favourite[]
+
+  @@index([userId])
+}
+
+model Favourite {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId    String   @map("user_id") @db.ObjectId
+  listingId String   @map("listing_id") @db.ObjectId
+  createdAt DateTime @default(now()) @map("created_at")
+
+  user    User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  listing Listing @relation(fields: [listingId], references: [id], onDelete: Cascade)
+
+  @@index([userId, listingId])
+  @@index([listingId])
+}
+
+model Review {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  rating    Int
+  comment   String?
+  userId    String   @map("user_id") @db.ObjectId
+  listingId String   @map("listing_id") @db.ObjectId
+  createdAt DateTime @default(now()) @map("created_at")
+
+  user    User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  listing Listing @relation(fields: [listingId], references: [id], onDelete: Cascade)
+
+  @@index([userId, listingId])
+  @@index([listingId])
+}
+
+model BlogPost {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  title     String
+  slug      String   @unique
+  content   String
+  imageSrc  String
+  category  String
+  userId    String   @db.ObjectId // Add @db.ObjectId to match User.id
+  createdAt DateTime @default(now()) @map("created_at")
+  User      User     @relation(fields: [userId], references: [id])
+}
+
+model Subscription {
+  id          String       @id @default(auto()) @map("_id") @db.ObjectId
+  email       String
+  isSubscribe IS_SUBSCRIBE @default(Enable) @map("is_subscribe")
+  createdAt   DateTime     @default(now()) @map("created_at")
+}
+
+enum Role {
+  USER
+  ADMIN
+}
+
+enum Status {
+  Pending
+  Approved
+}
+
+enum IS_SUBSCRIBE {
+  Enable
+  Disabled
+}

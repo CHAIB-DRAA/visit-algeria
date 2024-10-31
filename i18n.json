@@ -1,0 +1,8 @@
+{
+"locales": ["en", "fr"],        // Langues disponibles
+"defaultLocale": "en",          // Langue par défaut
+"pages": {
+"*": ["common"],              // Fichiers de traduction partagés entre toutes les pages
+"/about": ["about"]           // Fichiers spécifiques à certaines pages
+}
+}
