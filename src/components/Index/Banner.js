@@ -20,7 +20,7 @@ const Banner = () => {
 		<div className="banner-area bg-1">
 			<div className="container-fluid">
 				<div className="banner-content ptb-100">
-					<h1>Trouvez tout ce que vous voulez.</h1>
+					<h1>Explorer de nouveaux horizons.</h1>
 
 					<SearchForm />
 
