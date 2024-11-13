@@ -14,6 +14,12 @@ export const categories = [
 		label: "Hôtels",
 		imageSrc: require("../public/images/category/hotel.png"),
 	},
+	
+	{
+		value: "Musées",
+		label: "Musées",
+		imageSrc: require("../public/images/category/hotel.png"),
+	},
 	{
 		value: "Immobilier",
 		label: "Location d'immobiliers",
