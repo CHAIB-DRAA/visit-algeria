@@ -31,6 +31,16 @@ export const categories = [
 		imageSrc: require("../public/images/category/modern.png"),
 	},
 	{
+		value: "Jardins",
+		label: "Jardins",
+		imageSrc: require("../public/images/category/car.png"),
+	},
+	{
+		value: "Histoire",
+		label: "Histoire",
+		imageSrc: require("../public/images/category/car.png"),
+	},
+	{
 		value: "Campagne",
 		label: "Campagnes",
 		imageSrc: require("../public/images/category/countryside.png"),
