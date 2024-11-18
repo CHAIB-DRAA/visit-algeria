@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, {useEffect} from "react";
 import Image from "next/image";
 import Link from "next/link";
 import location1 from "../../../public/images/location/location-1.jpg";
@@ -13,6 +13,7 @@ import starIcon from "../../../public/images/icon/star.svg";
 import starHIcon from "../../../public/images/icon/star-h.svg";
 import shape1 from "../../../public/images/shape-1.png";
 import shape2 from "../../../public/images/shape-2.png";
+import getListings from "@/actions/getListings";
 
 // Données des emplacements
 const locationsData = [
@@ -22,7 +23,7 @@ const locationsData = [
 		title: "Tassili n'Ajjer",
 		subtitle: "Parc National, Sud Algérie",
 		rating: 5,
-		link: "/listing/56/tassili-n-ajjer",
+		link: "/listing/673b4f96adb0929420b9c33d/parc-national-du-tassili-najjer",
 	},
 	{
 		id: 2,
@@ -67,7 +68,10 @@ const locationsData = [
 ];
 
 // Composant pour afficher un emplacement
-const LocationItem = ({ image, title, subtitle, rating, link }) => {
+const LocationItem = ({listings, image, title, subtitle, rating, link }) => {
+	useEffect(() => {
+		console.error(listings);
+	}, []);
 	// Générer des icônes d'étoiles en fonction de la note
 	const stars = Array.from({ length: 5 }, (_, index) => (
 		<li key={index}>
@@ -95,6 +99,7 @@ const LocationItem = ({ image, title, subtitle, rating, link }) => {
 
 // Composant principal pour afficher les emplacements
 const Locations = () => {
+
 	return (
 		<div className="location-area ptb-100">
 			<div className="container for-shape">

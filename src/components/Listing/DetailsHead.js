@@ -14,8 +14,9 @@ import RatingStars from "./RatingStars";
 const DetailsHead = ({
 	title,
 	location_value,
-	created_at,
+	createdAt,
 	id,
+	name,
 	price,
 	reviews,
 }) => {
@@ -37,22 +38,13 @@ const DetailsHead = ({
 					</li>
 					<li>
 						<Image src={clock} alt="clock" width={18} height={18} />
-						{formatDateWithMonth(created_at)}
+						{formatDateWithMonth(createdAt)}
 					</li>
-					<li>
-						<Image
-							src={informationLine}
-							alt="information"
-							width={18}
-							height={18}
-						/>
-						ID: TR-{id}-S
-					</li>
+					
 				</ul>
 			</li>
 
 			<li className="review-wraps">
-				<h3>{formattedPrice(price)}</h3>
 				<RatingStars rating={rating} />
 			</li>
 		</ul>

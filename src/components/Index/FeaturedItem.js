@@ -17,7 +17,7 @@ const FeaturedItem = ({
 	user,
 	price,
 	location_value,
-	created_at,
+	createdAt,
 	currentUser,
 }) => {
 	return (
@@ -59,7 +59,7 @@ const FeaturedItem = ({
 							height="18"
 							alt="features"
 						/>
-						{formatDate(created_at)}
+						{formatDate(createdAt)}
 					</li>
 					<li>
 						<Image
