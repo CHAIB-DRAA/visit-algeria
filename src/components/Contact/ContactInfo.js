@@ -38,23 +38,7 @@ const ContactInfo = () => {
                   <a href="mailto:contact@beautealgerienne.com>contact@beautealgerienne.com</a>
                 </div>
               </div>
-              {/*
-              <div className="col-lg-4 col-md-6">
-                <div className="single-contact-nfo">
-                  <Image
-                    src={contactinfo3}
-                    width={"auto"}
-                    height={"auto"}
-                    alt="contact"
-                  />
-                  <h3>Visit Us</h3>
-                  <p>
-                    Cecilia Chapman, 711-2880 Nulla St. Mankato Mississippi
-                    96522
-                  </p>
-                </div>
-              </div>
-              */}
+             
             </div>
             <Image
               className="border-shape"
