@@ -35,10 +35,9 @@ const ContactInfo = () => {
                     alt="contact"
                   />
                   <h3>Mail Us</h3>
-                  <a href="mailto:contact@beautealgerienne.com>contact@beautealgerienne.com</a>
+                  <a href="mailto:contact@beautealgerienne.com">contact@beautealgerienne.com</a>
                 </div>
               </div>
-             
             </div>
             <Image
               className="border-shape"
