@@ -21,9 +21,8 @@ const ContactInfo = () => {
                     height={"auto"}
                     alt="contact"
                   />
-                  <h3>Call Us</h3>
-                  <a href="tel:(257)-563-7401">(257) 563-7401</a>
-                  <a href="tel:(372)-587-2335">(372) 587-2335</a>
+                  <h3>Par téléphone</h3>
+                  <a href="tel:(33)772339892">(33) 72 33 98 92</a>
                 </div>
               </div>
               <div className="col-lg-4 col-md-6">
@@ -34,7 +33,7 @@ const ContactInfo = () => {
                     height={"auto"}
                     alt="contact"
                   />
-                  <h3>Mail Us</h3>
+                  <h3>Par mail</h3>
                   <a href="mailto:contact@beautealgerienne.com">contact@beautealgerienne.com</a>
                 </div>
               </div>
