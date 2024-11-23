@@ -1,20 +1,9 @@
-"use client"
-import React, {useEffect} from "react";
+import React from "react";
 import Link from "next/link";
 
-const PageBanner = ({ pageTitle, imageSrc }) => {
-	useEffect(() => {
-
-	}, [imageSrc]);
+const PageBanner = ({ pageTitle }) => {
 	return (
-		<div
-			className="page-banner-area overly ptb-100"
-			style={{
-				backgroundImage: `url(${imageSrc})`,
-				backgroundSize: 'cover',
-				backgroundPosition: 'center',
-			}}
-		>
+		<div className="page-banner-area overly bg-10 ptb-100">
 			<div className="container">
 				<div className="page-banner-content white-title">
 					<ul>

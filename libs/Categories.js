@@ -14,11 +14,11 @@ export const categories = [
 		label: "Hôtels",
 		imageSrc: require("../public/images/category/hotel.png"),
 	},
-	
+
 	{
 		value: "Musées",
 		label: "Musées",
-		imageSrc: require("../public/images/category/hotel.png"),
+		imageSrc: require("../public/images/category/musé.jpg"),
 	},
 	{
 		value: "Immobilier",
@@ -39,12 +39,12 @@ export const categories = [
 	{
 		value: "Jardins",
 		label: "Jardins",
-		imageSrc: require("../public/images/category/car.png"),
+		imageSrc: require("../public/images/category/jardins.jpg"),
 	},
 	{
 		value: "Histoire",
 		label: "Histoire",
-		imageSrc: require("../public/images/category/car.png"),
+		imageSrc: require("../public/images/category/histoire.jpg"),
 	},
 	{
 		value: "Campagne",
