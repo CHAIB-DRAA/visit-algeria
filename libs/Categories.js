@@ -18,7 +18,7 @@ export const categories = [
 	{
 		value: "Musées",
 		label: "Musées",
-		imageSrc: require("../public/images/category/musé.jpg"),
+		imageSrc: require("../public/images/category/musée.png"),
 	},
 	{
 		value: "Immobilier",
@@ -39,12 +39,12 @@ export const categories = [
 	{
 		value: "Jardins",
 		label: "Jardins",
-		imageSrc: require("../public/images/category/jardins.jpg"),
+		imageSrc: require("../public/images/category/jardins.png"),
 	},
 	{
 		value: "Histoire",
 		label: "Histoire",
-		imageSrc: require("../public/images/category/histoire.jpg"),
+		imageSrc: require("../public/images/category/histoire.png"),
 	},
 	{
 		value: "Campagne",
