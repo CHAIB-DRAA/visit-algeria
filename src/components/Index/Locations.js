@@ -31,7 +31,7 @@ const locationsData = [
 		title: "Djanet",
 		subtitle: "Oasis, Sud-Est Algérie",
 		rating: 4.5,
-		link: "/listing/2/djanet",
+		link: "/listing/6741d5b7aa372d8af6775e25/djanet",
 	},
 	{
 		id: 3,
@@ -39,7 +39,7 @@ const locationsData = [
 		title: "Ghardaïa",
 		subtitle: "Ville historique, M'zab",
 		rating: 4.5,
-		link: "/listing/3/ghardaia",
+		link: "/listing/6741d40a9ae1b57aef70c09d/ville-historique-mzab",
 	},
 	{
 		id: 4,
@@ -47,7 +47,7 @@ const locationsData = [
 		title: "Timgad",
 		subtitle: "Ruines romaines, Aurès",
 		rating: 5,
-		link: "/listing/4/timgad",
+		link: "/listing/6741d27f9ae1b57aef70c09c/timgad",
 	},
 	{
 		id: 5,
@@ -55,15 +55,15 @@ const locationsData = [
 		title: "Kasbah d'Alger",
 		subtitle: "Patrimoine mondial, Alger",
 		rating: 4.5,
-		link: "/listing/5/kasbah-alger",
+		link: "/listing/6734802e97c39d67c3b2ffb7/la-casbah-dalger",
 	},
 	{
 		id: 6,
 		image: location6, // Remplacez par l'image de Béjaïa
-		title: "Béjaïa",
-		subtitle: "Ville côtière, Kabylie",
-		rating: 4,
-		link: "/listing/6/bejaia",
+		title: "Cathedrale du Sacré-Cœur",
+		subtitle: "Cathedrale du Sacré-Cœur, Oran",
+		rating: 4.3,
+		link: "/listing/673b077fb445b5facb6a748d/cathedrale-du-sacr-cur",
 	},
 ];
 
