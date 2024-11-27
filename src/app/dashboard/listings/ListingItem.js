@@ -10,7 +10,7 @@ const ListingItem = ({
 						 slug,
 						 imageSrc,
 						 user,
-						 created_at,
+						 createdAt,
 						 category,
 						 onDelete,
 					 }) => {
@@ -29,7 +29,7 @@ const ListingItem = ({
 
 					<ul className="fs-14">
 						<li>Author: {user.name}</li>
-						<li>Date: {formatDateWithMonth(created_at)}</li>
+						<li>Date: {formatDateWithMonth(createdAt)}</li>
 						<li>Category: {category}</li>
 					</ul>
 

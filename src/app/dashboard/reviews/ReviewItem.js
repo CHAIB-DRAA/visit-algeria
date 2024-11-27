@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { formatDateWithMonth } from "@/utils/formatDate";
 
-const ReviewItem = ({ comment, user, listing, created_at, onDelete }) => {
+const ReviewItem = ({ comment, user, listing, createdAt, onDelete }) => {
 	return (
 		<div className="col-md-6 col-lg-6 mb-4">
 			<div className="review-card card">
@@ -12,7 +12,7 @@ const ReviewItem = ({ comment, user, listing, created_at, onDelete }) => {
 					<p className="card-title">{comment}</p>
 					<ul>
 						<li>Author: {user.name}</li>
-						<li>Date: {formatDateWithMonth(created_at)}</li>
+						<li>Date: {formatDateWithMonth(createdAt)}</li>
 						<li>Listing: {listing.title}</li>
 					</ul>
 
