@@ -82,8 +82,10 @@ const SearchForm = () => {
 									placeholder="Tapez ce que vous cherchez..."
 									value={category}
 									onChange={(e) => {
-										setCategory(e.target.value);
-										categoryFind(e.target.value);
+										const value = e.target.value;
+										const capitalizedValue = value.charAt(0).toUpperCase() + value.slice(1).toLowerCase();
+										setCategory(capitalizedValue);
+										categoryFind(capitalizedValue);
 									}}
 								/>
 								<Image
@@ -110,8 +112,10 @@ const SearchForm = () => {
 									placeholder="Entrez une localisation (ex: Alger)"
 									value={LocationValue}
 									onChange={(e) => {
-										setLocationValue(e.target.value);
-										locationFind(e.target.value);
+										const value = e.target.value;
+										const capitalizedValue = value.charAt(0).toUpperCase() + value.slice(1).toLowerCase();
+										setLocationValue(capitalizedValue);
+										locationFind(capitalizedValue);
 									}}
 								/>
 								<Image
