@@ -100,9 +100,9 @@ const Featured = ({ currentUser }) => {
 							<li className="nav-item">
 								<button
 									className={`nav-link default-btn ${
-										cat === "Sahara" && "active"
+										cat === "sahara" && "active"
 									}`}
-									onClick={() => getFeatured("Sahara")}
+									onClick={() => getFeatured("sahara")}
 								>
 									Sahara
 								</button>
