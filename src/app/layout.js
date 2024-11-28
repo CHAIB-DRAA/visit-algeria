@@ -18,10 +18,10 @@ import { Readex_Pro, Dancing_Script } from "next/font/google";
 export const dynamic = "force-dynamic";
 
 export const metadata = {
-  title: "Teor - Site de petites annonces et annuaire en Algérie",
+  title: "DzairTrips - Site de petites annonces et annuaire en Algérie",
   description: "Découvrez des offres incroyables et des services variés en Algérie sur notre plateforme de petites annonces. Trouvez des produits, des services et des opportunités dans tout le pays.",
 
-  metadataBase: new URL("http://localhost:300"),
+  metadataBase: new URL("http://www.dzairtrips.com"),
   icons: [
     {
       rel: "icon",

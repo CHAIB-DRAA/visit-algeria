@@ -59,9 +59,9 @@ const Featured = ({ currentUser }) => {
 							<li className="nav-item">
 								<button
 									className={`nav-link default-btn ${
-										cat === "Hotel" && "active"
+										cat === "Hôtel" && "active"
 									}`}
-									onClick={() => getFeatured("Hotel")}
+									onClick={() => getFeatured("Hôtel")}
 								>
 									Hotêls
 								</button>
@@ -80,9 +80,9 @@ const Featured = ({ currentUser }) => {
 							<li className="nav-item">
 								<button
 									className={`nav-link default-btn ${
-										cat === "Modern" && "active"
+										cat === "Plage" && "active"
 									}`}
-									onClick={() => getFeatured("plage")}
+									onClick={() => getFeatured("Plage")}
 								>
 									Plages
 								</button>
@@ -90,19 +90,19 @@ const Featured = ({ currentUser }) => {
 							<li className="nav-item">
 								<button
 									className={`nav-link default-btn ${
-										cat === "Real Estate" && "active"
+										cat === "Châteaux" && "active"
 									}`}
-									onClick={() => getFeatured("Real Estate")}
+									onClick={() => getFeatured("Châteaux")}
 								>
-									Montagnes
+									Châteaux
 								</button>
 							</li>
 							<li className="nav-item">
 								<button
 									className={`nav-link default-btn ${
-										cat === "Désert" && "active"
+										cat === "Sahara" && "active"
 									}`}
-									onClick={() => getFeatured("sahara")}
+									onClick={() => getFeatured("Sahara")}
 								>
 									Sahara
 								</button>

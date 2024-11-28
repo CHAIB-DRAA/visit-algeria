@@ -3,12 +3,12 @@
 import React, {useEffect} from "react";
 import Image from "next/image";
 import Link from "next/link";
-import location1 from "../../../public/images/location/location-1.jpg";
-import location2 from "../../../public/images/location/location-2.jpg";
-import location3 from "../../../public/images/location/location-3.jpg";
-import location4 from "../../../public/images/location/location-4.jpg";
-import location5 from "../../../public/images/location/location-5.jpg";
-import location6 from "../../../public/images/location/location-6.jpg";
+import location1 from "../../../public/images/location/djanet.png";
+import location2 from "../../../public/images/location/chria.png";
+import location3 from "../../../public/images/location/mzab.png";
+import location4 from "../../../public/images/location/timgad.png";
+import location5 from "../../../public/images/location/kasbah.png";
+import location6 from "../../../public/images/location/sacre-oran.png";
 import starIcon from "../../../public/images/icon/star.svg";
 import starHIcon from "../../../public/images/icon/star-h.svg";
 import shape1 from "../../../public/images/shape-1.png";
@@ -28,10 +28,10 @@ const locationsData = [
 	{
 		id: 2,
 		image: location2, // Remplacez par l'image de Djanet
-		title: "Djanet",
-		subtitle: "Oasis, Sud-Est Algérie",
+		title: "Montagnes de Chréa",
+		subtitle: "montagne, Blida",
 		rating: 4.5,
-		link: "/listing/6741d5b7aa372d8af6775e25/djanet",
+		link: "/listing//67483fae36976f652c03081f/montagnes-de-chra",
 	},
 	{
 		id: 3,
@@ -61,7 +61,7 @@ const locationsData = [
 		id: 6,
 		image: location6, // Remplacez par l'image de Béjaïa
 		title: "Cathedrale du Sacré-Cœur",
-		subtitle: "Cathedrale du Sacré-Cœur, Oran",
+		subtitle: "Cathedrale du Sacré-Cœur",
 		rating: 4.3,
 		link: "/listing/673b077fb445b5facb6a748d/cathedrale-du-sacr-cur",
 	},

@@ -63,8 +63,8 @@ const Footer = () => {
 											alt="footer"
 										/>
 										Écrivez-nous :
-										<a href="mailto:hello@teor.com">
-											hello@teor.com
+										<a href="mailto:contact@dzairtrips.com">
+											contact@dzairtrips.com
 										</a>
 									</li>
 								</ul>
