@@ -36,7 +36,7 @@ const SearchForm = ({ searchParams }) => {
 							<Link href="/">Accueil</Link>
 						</li>
 						<li>
-							<span>Endroits</span>
+							<span>Lieux</span>
 						</li>
 					</ul>
 
@@ -57,9 +57,11 @@ const SearchForm = ({ searchParams }) => {
 										className="form-control"
 										placeholder="Tapez ce que vous recherchez..."
 										value={category}
-										onChange={(e) =>
-											setCategory(e.target.value)
-										}
+										onChange={(e) => {
+											const value = e.target.value;
+											const capitalizedValue = value.charAt(0).toUpperCase() + value.slice(1).toLowerCase();
+											setCategory(capitalizedValue);
+										}}
 									/>
 									<Image
 										src={globalIco}
@@ -76,9 +78,11 @@ const SearchForm = ({ searchParams }) => {
 										className="form-control"
 										placeholder="Entrez une localisation (ex : Oran)"
 										value={locationValue}
-										onChange={(e) =>
-											setLocationValue(e.target.value)
-										}
+										onChange={(e) => {
+											const value = e.target.value;
+											const capitalizedValue = value.charAt(0).toUpperCase() + value.slice(1).toLowerCase();
+											setLocationValue(capitalizedValue);
+										}}
 									/>
 									<Image
 										src={locationIco}
