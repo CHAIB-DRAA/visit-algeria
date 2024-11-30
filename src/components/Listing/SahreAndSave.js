@@ -16,13 +16,13 @@ import {
 import shareSvg from "../../../public/images/icon/share.svg";
 import HeartButton from "../HeartButton";
 
-const SahreAndSave = ({ currentUser, listingId, slug }) => {
+const SahreAndSave = ({ currentUser, listingId, title }) => {
 	useEffect(() => {
 		console.log("Component loaded");
 	}, []);
 
 	const shareUrl = typeof window !== "undefined" ? window.location.href : "";
-	const titles = `DzairTrips - ${slug}`;
+	const titles = `DzairTrips - ${title}`;
 
 	const socialMediaButtons = [
 		{ Button: FacebookShareButton, Icon: FacebookIcon },
