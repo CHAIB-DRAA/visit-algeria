@@ -8,15 +8,10 @@ import { formatDate } from "@/utils/formatDate";
 import Link from "next/link";
 
 const AuthorDetails = ({ user }) => {
-	const phone = user.profile?.phone;
-
-	// Vérification du numéro de téléphone
-	const isValidPhone = phone && phone.match(/^\d+$/); // Vérifie que le numéro contient uniquement des chiffres
-
 	return (
 		<div className="author-details-area pt-100">
 			<div className="container">
-				<div className="row align-items-center">
+				<div className="row align-items-center align-items-center">
 					<div className="col-lg-5">
 						<div className="author-details-img mr-15">
 							<Image
@@ -46,7 +41,9 @@ const AuthorDetails = ({ user }) => {
 										{user.profile?.facebook && (
 											<li>
 												<Link
-													href={user.profile?.facebook}
+													href={
+														user.profile?.facebook
+													}
 													target="_blank"
 													rel="noopener noreferrer"
 												>
@@ -79,7 +76,9 @@ const AuthorDetails = ({ user }) => {
 										{user.profile?.linkedin && (
 											<li>
 												<Link
-													href={user.profile?.linkedin}
+													href={
+														user.profile?.linkedin
+													}
 													target="_blank"
 													rel="noopener noreferrer"
 												>
@@ -92,16 +91,10 @@ const AuthorDetails = ({ user }) => {
 
 								<div className="contact-info">
 									<a
-										href={isValidPhone ? `https://wa.me/${phone}` : "#"}
+										href="https://www.whatsapp.com/"
 										className="default-btn active"
 										target="_blank"
 										rel="noopener noreferrer"
-										onClick={(e) => {
-											if (!isValidPhone) {
-												e.preventDefault();
-												alert("Numéro de téléphone invalide.");
-											}
-										}}
 									>
 										<span>
 											Chat Via Whatsapp
@@ -114,17 +107,11 @@ const AuthorDetails = ({ user }) => {
 										</span>
 									</a>
 									<a
-										href={isValidPhone ? `tel:${phone}` : "#"}
+										href={`tel:${user.profile?.phone}`}
 										className="default-btn"
-										onClick={(e) => {
-											if (!isValidPhone) {
-												e.preventDefault();
-												alert("Numéro de téléphone invalide.");
-											}
-										}}
 									>
 										<span>
-											Call: {phone}
+											Call: {user.profile?.phone}
 											<Image
 												src={callImg}
 												alt="call"
