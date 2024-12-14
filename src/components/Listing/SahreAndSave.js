@@ -38,7 +38,7 @@ const SahreAndSave = ({ currentUser, listingId, title }) => {
 				<div className="share-link">
           <span>
             <Image src={shareSvg} alt="Share" width={20} height={20} className="me-1" />
-            Share
+            Partager
           </span>
 					<ul className="social-icon">
 						{socialMediaButtons.map(({ Button, Icon }, index) => (

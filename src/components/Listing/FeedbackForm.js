@@ -10,9 +10,9 @@ import Button from "../FormHelpers/Button";
 import TextArea from "../FormHelpers/TextArea";
 const options = [
 	{ value: "1", label: "Terrible" },
-	{ value: "2", label: "Poor" },
-	{ value: "3", label: "Average" },
-	{ value: "4", label: "Good" },
+	{ value: "2", label: "Mauvais" },
+	{ value: "3", label: "Moyen" },
+	{ value: "4", label: "Bon" },
 	{ value: "5", label: "Excellent" },
 ];
 
@@ -58,17 +58,17 @@ const FeedbackForm = ({ currentUser, listingId }) => {
 	return (
 		<form className="leave-replay" onSubmit={handleSubmit(onSubmit)}>
 			<div className="d-flex justify-content-between">
-				<h3>Leave A Review</h3>
+				<h3>Ton avis compte pour nous </h3>
 				<Controller
 					name="rating"
 					control={control}
-					rules={{ required: "Please select an option" }}
+					rules={{ required: "donner votre avis" }}
 					render={({ field, fieldState }) => (
 						<Select
 							id="react-select-3-live-region"
 							{...field}
 							options={options}
-							placeholder="Select Experience"
+							placeholder="Note ton éxpérience"
 							isClearable
 						/>
 					)}
@@ -79,7 +79,7 @@ const FeedbackForm = ({ currentUser, listingId }) => {
 					<div className="form-group">
 						<TextArea
 							id="comment"
-							placeholder="Write a review"
+							placeholder="Donne ton avis "
 							disabled={isLoading}
 							register={register}
 							errors={errors}
@@ -89,7 +89,7 @@ const FeedbackForm = ({ currentUser, listingId }) => {
 				</div>
 
 				<div className="col-12">
-					<Button label="Submit Review" disabled={isLoading} />
+					<Button label="Valider" disabled={isLoading} />
 				</div>
 			</div>
 		</form>

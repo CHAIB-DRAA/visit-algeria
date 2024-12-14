@@ -9,11 +9,13 @@ import pdfIco from "../../../public/images/listing-details-img/pdf.svg";
 import downloadIco from "../../../public/images/listing-details-img/zip.svg";
 
 const RightSidebar = ({ user }) => {
+	const whatsappNumber = user?.profile?.phone ? user.profile.phone : '';
+
 	return (
 		<div className="col-lg-4">
 			<div className="right-sidebar">
 				<div className="bg-right-sidebar">
-					<h3>Seller Information</h3>
+					<h3> Information d'utilisateur</h3>
 					<div className="information-img d-flex align-items-center">
 						<Image
 							src={user?.image ? user.image : userImg}
@@ -40,9 +42,9 @@ const RightSidebar = ({ user }) => {
 						</li>
 						<li>
 							<i className="ri-phone-line"></i>
-							<a href={`tel:${user?.profile?.phone}`}>
-								{user?.profile?.phone
-									? user.profile.phone
+							<a href={`tel:${whatsappNumber}`}>
+								{whatsappNumber
+									? whatsappNumber
 									: "Phone Not Added"}
 							</a>{" "}
 							<span>Call Now</span>
@@ -51,9 +53,14 @@ const RightSidebar = ({ user }) => {
 
 					<ul className="contact-btn">
 						<li>
-							<buttom className="default-btn">
+							<a
+								href={`https://wa.me/${whatsappNumber}`}
+								className="default-btn"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								<span>
-									Chat Via Whatsapp
+									Contacter Via Whatsapp
 									<Image
 										src={message2}
 										alt="Image"
@@ -61,7 +68,7 @@ const RightSidebar = ({ user }) => {
 										height={24}
 									/>
 								</span>
-							</buttom>
+							</a>
 						</li>
 						<li>
 							<Link
@@ -69,7 +76,7 @@ const RightSidebar = ({ user }) => {
 								className="default-btn active"
 							>
 								<span>
-									View Profile
+									Voir le Profil
 									<Image
 										src={profileImg}
 										alt="Image"
@@ -105,7 +112,7 @@ const RightSidebar = ({ user }) => {
 						<div className="form-group">
 							<textarea
 								className="form-control"
-								placeholder="Your Name"
+								placeholder="Your Message"
 								cols="30"
 								rows="6"
 							></textarea>
@@ -117,7 +124,6 @@ const RightSidebar = ({ user }) => {
 						</div>
 					</form>
 				</div>
-
 
 			</div>
 		</div>

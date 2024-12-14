@@ -7,7 +7,7 @@ import ContactInfo from "@/components/Contact/ContactInfo";
 const page = () => {
 	return (
 		<>
-			<PageBanner pageTitle={"Contact Us"} />
+			<PageBanner pageTitle={"Contactez nous"} />
 
 			<ContactInfo />
 

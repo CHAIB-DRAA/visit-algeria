@@ -44,7 +44,7 @@ const Testimony = () => {
 
 					<div className="col-lg-6">
 						<div className="testimony-content">
-							<h2>Les témoignages de nos clients sont très importants pour nous</h2>
+							<h2>Les témoignages de nos visiteur sont très importants pour nous</h2>
 
 							<Swiper
 								slidesPerView={1}
@@ -109,7 +109,7 @@ const Testimony = () => {
 										</div>
 
 										<p>
-											"Mon voyage en Algérie a été une expérience inoubliable ! Les paysages sont à couper le souffle et la culture est incroyablement riche. J'ai découvert des endroits magnifiques, des gens accueillants, et j'ai savouré une délicieuse cuisine locale. Grâce à ce site, j'ai pu planifier mon voyage facilement et trouver des recommandations sur les meilleures attractions. Merci à ADLES !"
+											"Mon voyage en Algérie a été une expérience inoubliable ! Les paysages sont à couper le souffle et la culture est incroyablement riche. J'ai découvert des endroits magnifiques, des gens accueillants, et j'ai savouré une délicieuse cuisine locale. Grâce à ce site, j'ai pu planifier mon voyage facilement et trouver des recommandations sur les meilleures attractions. Merci à DzairTrips !"
 										</p>
 
 										<div className="for-post d-flex justify-content-start align-items-center">
@@ -120,8 +120,8 @@ const Testimony = () => {
 												height={64}
 											/>
 											<div className="traveller">
-												<h3>Clara Dupont</h3>
-												<span>Voyageuse</span>
+												<h3>philipe</h3>
+												<span>Voyageur</span>
 											</div>
 										</div>
 									</div>
@@ -182,7 +182,7 @@ const Testimony = () => {
 										</div>
 
 										<p>
-											"Explorer les marchés colorés d'Alger et se perdre dans les rues anciennes de la Casbah a été un rêve devenu réalité. Chaque rencontre avec les habitants a enrichi mon expérience et m'a donné envie de revenir. ADLES m'a aidé à découvrir des trésors cachés que je n'aurais jamais trouvés autrement. Je recommande vivement ce site à tous les voyageurs !"
+											"Explorer les marchés colorés d'Alger et se perdre dans les rues anciennes de la Casbah a été un rêve devenu réalité. Chaque rencontre avec les habitants a enrichi mon expérience et m'a donné envie de revenir. DzairTrips m'a aidé à découvrir des trésors cachés que je n'aurais jamais trouvés autrement. Je recommande vivement ce site à tous les voyageurs !"
 										</p>
 
 										<div className="for-post d-flex justify-content-start align-items-center">
@@ -193,7 +193,7 @@ const Testimony = () => {
 												height={64}
 											/>
 											<div className="traveller">
-												<h3>Marc Leclerc</h3>
+												<h3>Marc </h3>
 												<span>Aventurier</span>
 											</div>
 										</div>

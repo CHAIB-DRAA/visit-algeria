@@ -4,18 +4,15 @@ export default async function getUserById(params) {
 	try {
 		const { userId } = params;
 
-		// Use userId directly as a string
 		const user = await prisma.user.findUnique({
 			where: {
-				id: userId,
+				id: userId, // Use userId directly as a string
 			},
 			include: {
 				profile: true,
 				listings: {
 					take: 6,
 				},
-				// Uncomment the following line if you want to include favourites as well
-				// favourites: true,
 			},
 		});
 
@@ -26,7 +23,7 @@ export default async function getUserById(params) {
 
 		return user;
 	} catch (error) {
-		console.error("Error fetching user by ID:", error.message); // Log the error message for debugging
+		console.error("Error fetching user by ID:", error); // Log the error for debugging
 		return null; // Return null in case of an error
 	}
 }

@@ -9,7 +9,7 @@ const Reviews = ({ reviews }) => {
 	return (
 		<div className="review-wrap">
 			<h3>
-				Reviews <span>({reviews.length})</span>
+				Avis <span>({reviews.length})</span>
 			</h3>
 			<ul className="review-wrap-inner">
 				{reviews.length > 0 &&
