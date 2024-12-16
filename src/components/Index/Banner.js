@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -16,11 +16,29 @@ const Banner = () => {
 	const router = useRouter();
 	const { t } = useTranslation('common'); // 'common' fait référence au fichier common.json
 
+	const [headerText, setHeaderText] = useState("Explorer de nouveaux horizons.");
+	const headerTexts = [
+		"Explorer de nouveaux horizons.",
+		"Découvrez des expériences uniques.",
+		"Votre prochaine aventure vous attend.",
+	];
+
+	useEffect(() => {
+		const interval = setInterval(() => {
+			setHeaderText(prev => {
+				const currentIndex = headerTexts.indexOf(prev);
+				return headerTexts[(currentIndex + 1) % headerTexts.length];
+			});
+		}, 3000); // Change le texte toutes les 3 secondes
+
+		return () => clearInterval(interval); // Nettoyage de l'intervalle
+	}, []);
+
 	return (
 		<div className="banner-area bg-1">
 			<div className="container-fluid">
 				<div className="banner-content ptb-100">
-					<h1>Explorer de nouveaux horizons.</h1>
+					<h1 className="transition-opacity duration-500">{headerText}</h1>
 
 					<SearchForm />
 
@@ -31,13 +49,8 @@ const Banner = () => {
 						{categories.slice(0, 7).map((cat) => (
 							<li key={cat.label}>
 								<div
-									onClick={() =>
-										router.push(
-											`/listings/?category=${cat.value}`
-										)
-									}
+									onClick={() => router.push(`/listings/?category=${cat.value}`)}
 									style={{ cursor: "pointer" }}
-									href="/search"
 								>
 									{cat.label},
 								</div>

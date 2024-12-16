@@ -10,6 +10,7 @@ export default async function getUserById(params) {
 			},
 			include: {
 				profile: true,
+				
 				listings: {
 					take: 6,
 				},
