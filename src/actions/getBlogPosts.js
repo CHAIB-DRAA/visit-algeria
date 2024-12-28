@@ -7,7 +7,7 @@ export default async function getBlogPosts(params) {
 		let blogPosts;
 
 		if (limit) {
-			blogPosts = await prisma.blog.findMany({
+			blogPosts = await prisma.BlogPost.findMany({
 				orderBy: {
 					createdAt: "desc",
 				},
@@ -21,7 +21,7 @@ export default async function getBlogPosts(params) {
 				take: limit,
 			});
 		} else {
-			blogPosts = await prisma.blog.findMany({
+			blogPosts = await prisma.BlogPost.findMany({
 				orderBy: {
 					createdAt: "desc",
 				},
