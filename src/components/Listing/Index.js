@@ -71,7 +71,7 @@ const Index = ({ currentUser, listing, reviews }) => {
 
 	return (
 		<div className="listing-details-area ptb-100">
-			<div className="container">
+			<div className="container ">
 				<div className="row">
 					<div className="col-lg-8">
 						<div className="listing-details-content">
@@ -137,7 +137,6 @@ const Index = ({ currentUser, listing, reviews }) => {
 
 
 
-					<RightSidebar {...listing} />
 				</div>
 			</div>
 		</div>

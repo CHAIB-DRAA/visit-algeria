@@ -34,7 +34,7 @@ const ContactInfo = () => {
                     alt="contact"
                   />
                   <h3>Par mail</h3>
-                  <a href="mailto:contact@beautealgerienne.com">contact@beautealgerienne.com</a>
+                  <a href="mailto:contact@dzairtrips.com">contact@dzairtrips.com</a>
                 </div>
               </div>
             </div>

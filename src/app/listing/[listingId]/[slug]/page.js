@@ -19,7 +19,7 @@ const page = async ({ params }) => {
 	return (
 		<>
 
-
+			<PageBanner pageTitle={listing.title}  />
 			<Listing
 				currentUser={currentUser}
 				listing={listing}

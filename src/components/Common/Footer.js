@@ -9,6 +9,8 @@ import emailIco from "../../../public/images/icon/email.svg";
 import menuActive from "../../../public/images/menu-active.png";
 
 const Footer = () => {
+	const whatsappNumber = "0033772339892";
+
 	return (
 		<>
 			<div className="footer-area pt-100 pb-70 bg-color-fffcf8">
@@ -66,6 +68,17 @@ const Footer = () => {
 										<a href="mailto:contact@dzairtrips.com">
 											contact@dzairtrips.com
 										</a>
+									</li>
+									<li>
+
+											<i className="ri-phone-line contact-btn ">
+											<a href={`tel:${whatsappNumber}`}>
+												{whatsappNumber
+													? whatsappNumber
+													: "Phone Not Added"}
+											</a>{" "}
+											</i>
+
 									</li>
 								</ul>
 							</div>
@@ -248,8 +261,8 @@ const Footer = () => {
 						<p>
 							© <span>DZ Travel</span> est fièrement détenu par{" "}
 							<a
-								href="https://envytheme.com/"
-								target="_blank"
+								href="/"
+
 								rel="noopener noreferrer"
 							>
 								DZ Travel
