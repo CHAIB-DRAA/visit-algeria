@@ -14,7 +14,6 @@ const MapWithNoSSR = dynamic(() => import("../Map"), {
 import Features from "./Features";
 import SahreAndSave from "./SahreAndSave";
 import DetailsImages from "./DetailsImages";
-import Listings from "@/components/Listings";
 
 const Index = ({ currentUser, listing, reviews }) => {
 	const [coordinates, setCoordinates] = useState({ lat: null, lng: null });
@@ -71,7 +70,7 @@ const Index = ({ currentUser, listing, reviews }) => {
 	}
 
 	return (
-		<div className="listing-details-area ptb-100 ">
+		<div className="listing-details-area ptb-100">
 			<div className="container ">
 				<div className="row">
 					<div className="col-lg-11">
@@ -140,7 +139,6 @@ const Index = ({ currentUser, listing, reviews }) => {
 
 				</div>
 			</div>
-
 		</div>
 	);
 };
