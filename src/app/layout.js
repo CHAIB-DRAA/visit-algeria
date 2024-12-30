@@ -14,7 +14,7 @@ import Footer from "@/components/Common/Footer";
 import TosterProvider from "@/providers/TosterProvider";
 import { getCurrentUser } from "@/actions/getCurrentUser";
 import { Readex_Pro, Dancing_Script } from "next/font/google";
-
+import { SpeedInsights } from "@vercel/speed-insights/next"
 export const dynamic = "force-dynamic";
 
 export const metadata = {
@@ -68,6 +68,8 @@ export default async function RootLayout({ children }) {
         <TosterProvider />
         <Navbar currentUser={currentUser} />
         {children}
+        <SpeedInsights />
+
         <Footer />
       </body>
     </html>
