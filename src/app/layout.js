@@ -15,7 +15,7 @@ import TosterProvider from "@/providers/TosterProvider";
 import { getCurrentUser } from "@/actions/getCurrentUser";
 import { Readex_Pro, Dancing_Script } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next"
-import {Analytics} from "@vercel/analytics/vue";
+import { Analytics } from "@vercel/analytics/react"
 export const dynamic = "force-dynamic";
 
 export const metadata = {
@@ -70,10 +70,8 @@ export default async function RootLayout({ children }) {
         <Navbar currentUser={currentUser} />
         {children}
         <SpeedInsights />
-        <Analytics />
-
-
         <Footer />
+       <Analytics />
       </body>
     </html>
   );
